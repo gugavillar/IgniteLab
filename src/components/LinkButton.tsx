@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { memo, ReactNode } from 'react'
 
 interface LinkButtonProps {
   text: string
@@ -20,4 +20,4 @@ const LinkButton = ({ text, icon, variant }: LinkButtonProps) => (
   </a>
 )
 
-export default LinkButton
+export default memo(LinkButton)

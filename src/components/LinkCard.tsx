@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { memo, ReactNode } from 'react'
 import { CaretRight } from 'phosphor-react'
 
 interface LinkCardProps {
@@ -23,4 +23,4 @@ const LinkCard = ({ icon, text, description }: LinkCardProps) => (
   </a>
 )
 
-export default LinkCard
+export default memo(LinkCard)

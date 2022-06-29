@@ -1,0 +1,9 @@
+import * as yup from 'yup'
+import { yupResolver } from '@hookform/resolvers/yup'
+
+export const homeFormValidation = yupResolver(
+  yup.object().shape({
+    name: yup.string().required(),
+    email: yup.string().email().required()
+  })
+)
