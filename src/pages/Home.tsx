@@ -1,3 +1,4 @@
+import Footer from '../components/Footer'
 import HomeForm from '../components/HomeForm'
 import TitleHome from '../components/TitleHome'
 
@@ -9,6 +10,7 @@ const Home = () => {
         <HomeForm />
       </div>
       <img src='/src/assets/code-mock.png' className='mt-10' alt='' />
+      <Footer />
     </div>
   )
 }

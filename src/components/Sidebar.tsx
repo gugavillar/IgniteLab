@@ -17,7 +17,7 @@ interface GetLessonsQueryResponse {
 }
 
 const Sidebar = () => {
-  const { data } = useQuery<GetLessonsQueryResponse>(GET_LESSONS_QUERY)
+  const { data, loading } = useQuery<GetLessonsQueryResponse>(GET_LESSONS_QUERY)
 
   return (
     <aside className='w-[348px] bg-gray-700 p-6 border-l border-gray-600'>
@@ -25,7 +25,7 @@ const Sidebar = () => {
         Cronograma de aulas
       </span>
       <div className='flex flex-col gap-8'>
-        {!data?.lessons?.length && <Loading />}
+        {loading && <Loading />}
         {data?.lessons?.map((lesson) => (
           <Lesson
             key={lesson?.id}
