@@ -2,6 +2,7 @@ import { useQuery } from '@apollo/client'
 
 import { GET_LESSONS_QUERY } from '../constants/lessonsQuery'
 import Lesson from './Lesson'
+import Loading from './Loading'
 
 declare type ISODateString = string
 
@@ -24,6 +25,7 @@ const Sidebar = () => {
         Cronograma de aulas
       </span>
       <div className='flex flex-col gap-8'>
+        {!data?.lessons?.length && <Loading />}
         {data?.lessons?.map((lesson) => (
           <Lesson
             key={lesson?.id}
