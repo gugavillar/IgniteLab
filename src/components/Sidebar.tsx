@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/client'
 
 import { GET_LESSONS_QUERY } from '../constants/lessonsQuery'
-import Lesson from './Lesson'
+import Lesson from './Lessons/Lesson'
 import Loading from './Loading'
 
 declare type ISODateString = string
