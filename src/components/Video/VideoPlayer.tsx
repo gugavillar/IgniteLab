@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { Youtube, DefaultUi, Player } from '@vime/react'
 
 import '@vime/core/themes/default.css'
@@ -10,7 +11,7 @@ const VideoPlayer = ({ video_id }: VideoPlayerProps) => {
   return (
     <div className='bg-black justify-center flex'>
       <div className='h-full w-full max-w-[1100px] max-h-[60vh] aspect-video'>
-        <Player>
+        <Player controls>
           <Youtube videoId={video_id} />
           <DefaultUi />
         </Player>
@@ -19,4 +20,4 @@ const VideoPlayer = ({ video_id }: VideoPlayerProps) => {
   )
 }
 
-export default VideoPlayer
+export default memo(VideoPlayer)
