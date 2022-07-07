@@ -1,6 +1,6 @@
 import { useQuery } from '@apollo/client'
 
-import { GET_LESSONS_QUERY } from '../constants/lessonsQuery'
+import { GET_LESSONS_QUERY } from '@constants/lessonsQuery'
 import Lesson from './Lessons/Lesson'
 import Loading from './Loading'
 

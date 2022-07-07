@@ -1,6 +1,6 @@
-import Footer from '../components/Footer'
-import HomeForm from '../components/HomeForm'
-import TitleHome from '../components/TitleHome'
+import Footer from '@components/Footer'
+import HomeForm from '@components/HomeForm'
+import TitleHome from '@components/TitleHome'
 
 const Home = () => {
   return (

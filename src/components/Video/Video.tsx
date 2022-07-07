@@ -1,12 +1,13 @@
 import { useQuery } from '@apollo/client'
 
-import { GET_LESSON_BY_SLUG } from '../../constants/lessonsQuery'
+import { GET_LESSON_BY_SLUG } from '@constants/lessonsQuery'
 
-import Footer from '../Footer'
+import Footer from '@components/Footer'
+import Loading from '@components/Loading'
+
 import VideoPlayer from './VideoPlayer'
 import VideoDescription from './VideoDescription'
 import ComplementarySection from './ComplementarySection'
-import Loading from '../Loading'
 
 interface VideoProps {
   slug: string
@@ -27,14 +28,11 @@ interface GetLessonBySlug {
 }
 
 const Video = ({ slug }: VideoProps) => {
-  const { loading, error, data } = useQuery<GetLessonBySlug>(
-    GET_LESSON_BY_SLUG,
-    {
-      variables: {
-        slug
-      }
+  const { loading, error, data } = useQuery<GetLessonBySlug>(GET_LESSON_BY_SLUG, {
+    variables: {
+      slug
     }
-  )
+  })
   if (loading)
     return (
       <div className='flex-1'>

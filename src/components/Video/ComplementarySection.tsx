@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { FileArrowDown, Image } from 'phosphor-react'
 
-import LinkCard from '../LinkCard'
+import LinkCard from '@components/LinkCard'
 
 const ComplementarySection = () => (
   <section className='mt-20 gap-8 flex'>

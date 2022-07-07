@@ -2,8 +2,8 @@ import { useMutation } from '@apollo/client'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 
-import { homeFormValidation } from '../validators/homeFormYupValidators'
-import { CREATE_NEW_SUBSCRIBER } from '../constants/subscriberQuery'
+import { homeFormValidation } from '@validators/homeFormYupValidators'
+import { CREATE_NEW_SUBSCRIBER } from '@constants/subscriberQuery'
 
 interface HomeFormValues {
   email: string
