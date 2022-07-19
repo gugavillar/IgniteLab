@@ -11,7 +11,7 @@ import { VideoDescription } from './VideoDescription'
 import { ComplementarySection } from './ComplementarySection'
 
 interface VideoProps {
-  slug: Pick<LessonInterface, 'slug'>
+  slug: string
 }
 
 interface GetLessonBySlug {

@@ -1,5 +1,5 @@
 import { Footer } from '@components/Footer'
-import HomeForm from '@components/HomeForm/HomeForm'
+import { HomeForm } from '@components/HomeForm'
 import { TitleHome } from '@components/TitleHome'
 
 export const Home = () => {
@@ -9,7 +9,7 @@ export const Home = () => {
         <TitleHome />
         <HomeForm />
       </div>
-      <img src='/src/assets/code-mock.png' className='mt-10' alt='' />
+      <img src='/assets/code-mock.png' className='mt-10' alt='' />
       <Footer />
     </div>
   )

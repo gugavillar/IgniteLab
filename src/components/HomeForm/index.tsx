@@ -10,7 +10,7 @@ interface HomeFormValues {
   name: string
 }
 
-const HomeForm = () => {
+export const HomeForm = () => {
   const {
     register,
     handleSubmit,
@@ -29,13 +29,13 @@ const HomeForm = () => {
 
   const handleSubscribe: SubmitHandler<HomeFormValues> = async (values) => {
     try {
-      await createSubscriber({
+      const { data } = await createSubscriber({
         variables: {
           email: values?.email,
           name: values?.name
         }
       })
-      navigation('/event')
+      if (data?.createSubscriber?.id) return navigation('/event')
     } catch (error) {
       console.log(error)
     }
@@ -72,5 +72,3 @@ const HomeForm = () => {
     </div>
   )
 }
-
-export default HomeForm
