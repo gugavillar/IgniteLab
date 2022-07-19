@@ -3,7 +3,7 @@ import { CheckCircle, Lock } from 'phosphor-react'
 
 import { AvailableLessonInterface } from './interfaces'
 
-const AvailableLesson = ({ isAvailable }: AvailableLessonInterface) =>
+export const AvailableLesson = memo(({ isAvailable }: AvailableLessonInterface) =>
   isAvailable ? (
     <span className='font-medium text-white text-sm flex items-center gap-2'>
       <CheckCircle size={20} />
@@ -15,5 +15,4 @@ const AvailableLesson = ({ isAvailable }: AvailableLessonInterface) =>
       Em breve
     </span>
   )
-
-export default memo(AvailableLesson)
+)

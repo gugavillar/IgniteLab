@@ -1,8 +1,8 @@
 import { memo } from 'react'
 
-import Logo from './Logo'
+import { Logo } from '../Icons/Logo'
 
-const TitleHome = () => (
+export const TitleHome = memo(() => (
   <div className='max-w-[640px]'>
     <Logo />
     <h1 className='text-[2.5rem] mt-8 leading-tight'>
@@ -14,6 +14,4 @@ const TitleHome = () => (
       para acessar as melhores oportunidades do mercado.
     </p>
   </div>
-)
-
-export default memo(TitleHome)
+))

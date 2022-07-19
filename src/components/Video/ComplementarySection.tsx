@@ -1,9 +1,9 @@
 import { memo } from 'react'
 import { FileArrowDown, Image } from 'phosphor-react'
 
-import LinkCard from '@components/LinkCard'
+import { LinkCard } from '@components/LinkCard'
 
-const ComplementarySection = () => (
+export const ComplementarySection = memo(() => (
   <section className='mt-20 gap-8 flex'>
     <LinkCard
       icon={<FileArrowDown size={40} />}
@@ -16,6 +16,4 @@ const ComplementarySection = () => (
       description='Baixe wallpapers exclusivos do Ignite Lab e personalize a sua máquina'
     />
   </section>
-)
-
-export default memo(ComplementarySection)
+))

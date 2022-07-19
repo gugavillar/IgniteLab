@@ -6,7 +6,7 @@ interface LinkButtonProps {
   variant: 'ghost' | 'default'
 }
 
-const LinkButton = ({ text, icon, variant }: LinkButtonProps) => (
+export const LinkButton = memo(({ text, icon, variant }: LinkButtonProps) => (
   <a
     href='#'
     className={
@@ -18,6 +18,4 @@ const LinkButton = ({ text, icon, variant }: LinkButtonProps) => (
     {icon}
     {text}
   </a>
-)
-
-export default memo(LinkButton)
+))

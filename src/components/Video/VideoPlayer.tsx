@@ -7,7 +7,7 @@ interface VideoPlayerProps {
   video_id: string
 }
 
-const VideoPlayer = ({ video_id }: VideoPlayerProps) => {
+export const VideoPlayer = memo(({ video_id }: VideoPlayerProps) => {
   return (
     <div className='bg-black justify-center flex'>
       <div className='h-full w-full max-w-[1100px] max-h-[60vh] aspect-video'>
@@ -18,6 +18,4 @@ const VideoPlayer = ({ video_id }: VideoPlayerProps) => {
       </div>
     </div>
   )
-}
-
-export default memo(VideoPlayer)
+})

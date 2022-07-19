@@ -7,7 +7,7 @@ interface LinkCardProps {
   description: string
 }
 
-const LinkCard = ({ icon, text, description }: LinkCardProps) => (
+export const LinkCard = memo(({ icon, text, description }: LinkCardProps) => (
   <a
     href='#'
     className='flex gap-6 bg-gray-700 items-stretch rounded overflow-hidden hover:bg-gray-600 transition-colors'
@@ -21,6 +21,4 @@ const LinkCard = ({ icon, text, description }: LinkCardProps) => (
       <CaretRight size={24} />
     </div>
   </a>
-)
-
-export default memo(LinkCard)
+))

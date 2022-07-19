@@ -1,22 +1,17 @@
 import { useQuery } from '@apollo/client'
 
 import { GET_LESSONS_QUERY } from '@constants/lessonsQuery'
-import Lesson from './Lessons/Lesson'
-import Loading from './Loading'
 
-declare type ISODateString = string
+import { LessonInterface } from '../../types/data'
+
+import { Lesson } from '../Lessons'
+import { Loading } from '../Loading'
 
 interface GetLessonsQueryResponse {
-  lessons: Array<{
-    id: string
-    title: string
-    slug: string
-    lessonType: 'live' | 'class'
-    availableAt: ISODateString
-  }>
+  lessons: Array<LessonInterface>
 }
 
-const Sidebar = () => {
+export const Sidebar = () => {
   const { data, loading } = useQuery<GetLessonsQueryResponse>(GET_LESSONS_QUERY)
 
   return (
@@ -25,17 +20,9 @@ const Sidebar = () => {
       <div className='flex flex-col gap-8'>
         {loading && <Loading />}
         {data?.lessons?.map((lesson) => (
-          <Lesson
-            key={lesson?.id}
-            availableAt={new Date(lesson?.availableAt)}
-            slug={lesson?.slug}
-            title={lesson?.title}
-            type={lesson?.lessonType}
-          />
+          <Lesson key={lesson?.id} lesson={lesson} />
         ))}
       </div>
     </aside>
   )
 }
-
-export default Sidebar

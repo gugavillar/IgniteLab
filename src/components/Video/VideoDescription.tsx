@@ -1,26 +1,20 @@
 import { DiscordLogo, Lightning } from 'phosphor-react'
 
-import Teacher from '@components/Teacher'
-import LinkButton from '@components/LinkButton'
+import { Teacher } from '@components/Teacher'
+import { LinkButton } from '@components/LinkButton'
+
+import { LessonInterface, TeacherInterface } from '../../types/data'
 
 interface VideoDescriptionProps {
-  title: string | undefined
-  description: string | undefined
-  teacher:
-    | {
-        avatarURL: string
-        name: string
-        bio: string
-      }
-    | undefined
+  lesson: LessonInterface
 }
 
-const VideoDescription = ({ title, description, ...teacher }: VideoDescriptionProps) => (
+export const VideoDescription = ({ lesson: { title, description, teacher } }: VideoDescriptionProps) => (
   <section className='flex items-start gap-16'>
     <div className='flex-1 flex-col'>
       <h1 className='text-2xl font-bold'>{title}</h1>
       <p className='text-gray-200 mt-4 leading-relaxed'>{description}</p>
-      <Teacher {...teacher?.teacher} />
+      <Teacher teacher={teacher as TeacherInterface} />
     </div>
     <div className='flex flex-col gap-4'>
       <LinkButton text='COMUNIDADE NO DISCORD' icon={<DiscordLogo size={24} />} variant='default' />
@@ -28,5 +22,3 @@ const VideoDescription = ({ title, description, ...teacher }: VideoDescriptionPr
     </div>
   </section>
 )
-
-export default VideoDescription
