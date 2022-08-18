@@ -2,8 +2,7 @@ import { DiscordLogo, Lightning } from 'phosphor-react'
 
 import { LinkButton } from '@components/LinkButton'
 import { Teacher } from '@components/Teacher'
-
-import { LessonInterface, TeacherInterface } from '../../types/data'
+import { LessonInterface, TeacherInterface } from '@types'
 
 interface VideoDescriptionProps {
   lesson: LessonInterface

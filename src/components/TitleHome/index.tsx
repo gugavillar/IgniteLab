@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-import { Logo } from '../Icons/Logo'
+import { Logo } from '@components/Icons/Logo'
 
 export const TitleHome = memo(() => (
   <div className="max-w-[640px]">

@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-import { TeacherInterface } from '../../types/data'
+import { TeacherInterface } from '@types'
 
 interface TeacherProps {
   teacher: TeacherInterface

@@ -1,12 +1,13 @@
 import { memo } from 'react'
 
-import ptBR, { isPast, format } from 'date-fns'
+import { isPast, format } from 'date-fns'
 import { Link, useParams } from 'react-router-dom'
 
-import { LessonInterface } from '../../types/data'
+import { ptBR } from '@constants/constants'
+import { LessonInterface } from '@types'
+
 import { ActiveLesson } from './ActiveLesson'
 import { NotActiveLesson } from './NotActiveLesson'
-
 interface LessonProps {
   lesson: LessonInterface
 }

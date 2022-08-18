@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-import { Logo } from '../Icons/Logo'
+import { Logo } from '@components/Icons/Logo'
 
 export const Header = memo(() => (
   <header className="w-full py-5 flex items-center justify-center bg-gray-700 border-b border-gray-600">

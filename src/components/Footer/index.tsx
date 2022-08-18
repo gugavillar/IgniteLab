@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-import { RocketLogo } from '../Icons/RocketLogo'
+import { RocketLogo } from '@components/Icons/RocketLogo'
 
 export const Footer = memo(() => (
   <footer className="w-full bg-gray-900">

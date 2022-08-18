@@ -1,10 +1,9 @@
 import { useQuery } from '@apollo/client'
 
+import { Lesson } from '@components/Lessons'
+import { Loading } from '@components/Loading'
 import { GET_LESSONS_QUERY } from '@constants/lessonsQuery'
-
-import { LessonInterface } from '../../types/data'
-import { Lesson } from '../Lessons'
-import { Loading } from '../Loading'
+import { LessonInterface } from '@types'
 
 interface GetLessonsQueryResponse {
   lessons: Array<LessonInterface>
