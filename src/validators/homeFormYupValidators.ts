@@ -1,5 +1,5 @@
-import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup'
 
 export const homeFormValidation = yupResolver(
   yup.object().shape({

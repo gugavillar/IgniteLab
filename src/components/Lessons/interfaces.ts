@@ -8,5 +8,7 @@ export interface AvailableLessonInterface {
   isAvailable: boolean
 }
 
-export interface ActiveLessonInterface extends ActiveAndNotActiveLessonInterface {}
-export interface NotActiveLessonInterface extends ActiveAndNotActiveLessonInterface {}
+export interface ActiveLessonInterface
+  extends ActiveAndNotActiveLessonInterface {}
+export interface NotActiveLessonInterface
+  extends ActiveAndNotActiveLessonInterface {}

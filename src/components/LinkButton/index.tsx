@@ -10,7 +10,7 @@ export const LinkButton = memo(({ text, icon, variant }: LinkButtonProps) => {
   const isDefaultButton = variant === 'default'
   return (
     <a
-      href='#'
+      href="#"
       className={
         isDefaultButton
           ? 'flex p-4 gap-2 rounded bg-green-500 text-sm items-center justify-center font-bold hover:bg-green-700 transition-colors'
@@ -22,3 +22,5 @@ export const LinkButton = memo(({ text, icon, variant }: LinkButtonProps) => {
     </a>
   )
 })
+
+LinkButton.displayName = 'LinkButton'
